@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   
-  <title>Frontend Mentor | Room homepage</title>
+  <title>Room homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,42 +18,80 @@
   </style>
 </head>
 <body>
-  Home
-  Shop
-  About
-  Contact
+  <header>
 
-  Discover innovative ways to decorate
+    <nav class="navbar" id="nav-bar">
+      <div class="logo"><img src="images/logo.svg"></div>
+      <ul class="navlist" id="nav-list">
+        <li><a href="#" class="navlinks">Home</a></li>
+        <li><a href="#" class="navlinks">Shop</a></li>
+        <li><a href="#" class="navlinks">About</a></li>
+        <li><a href="#" class="navlinks">Contact</a></li>
+      </ul>
+    </nav> 
+  </header>
+  <main>
+    <div class="top-container">
+      <div class="top-left" id="top-left-1"><img src="images/desktop-image-hero-1.jpg" class="top-left-img"></div>
+      <div class="top-left" id="top-left-2"><img src="images/desktop-image-hero-2.jpg" class="top-left-img"></div>
+      <div class="top-left" id="top-left-3"><img src="images/desktop-image-hero-3.jpg" class="top-left-img"></div>
+      <section class="top-right" id="top-right-1">
+        <h1 class="big-heading">Discover innovative ways to decorate</h1>
 
-  We provide unmatched quality, comfort, and style for property owners across the country. 
-  Our experts combine form and function in bringing your vision to life. Create a room in your 
-  own style with our collection and make your property a reflection of you and what you love.
+        <p class="text">We provide unmatched quality, comfort, and style for property owners across the country. 
+      Our experts combine form and function in bringing your vision to life. Create a room in your 
+      own style with our collection and make your property a reflection of you and what you love.</p>
 
-  Shop now
+        <button class="shop-btn">Shop now</button>
+        <img src="images/icon-arrow.svg">
+        <div class="arrow-container">
+          <span class="arrows"><img src="images/icon-angle-left.svg"></span>
+          <span class="arrows"><img src="images/icon-angle-right.svg"></span>
+        </div>
+      </section>
+      <section class="top-right" id="top-right-2">
+        <h1 class="big-heading">We are available all across the globe</h1>
 
-  We are available all across the globe
+        <p class="text">With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+        Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+        store locator. Any questions? Don't hesitate to contact us today.</p>
 
-  With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-  Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-  store locator. Any questions? Don't hesitate to contact us today.
+        <button class="shop-btn">Shop now</button>
+        <img src="images/icon-arrow.svg">
+        <div class="arrow-container">
+          <span class="arrows"><img src="images/icon-angle-left.svg"></span>
+          <span class="arrows"><img src="images/icon-angle-right.svg"></span>
+        </div>
+      </section>
+      <section class="top-right" id="top-right-3">
+        <h1 class="big-heading">Manufactured with the best materials</h1>
 
-  Shop now
+        <p class="text">Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+        to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+        experience in this industry, we understand what customers want for their home and office.</p>
 
-  Manufactured with the best materials
+        <button class="shop-btn">Shop now</button>
+        <img src="images/icon-arrow.svg">
+        <div class="arrow-container">
+          <span class="arrows"><img src="images/icon-angle-left.svg"></span>
+          <span class="arrows"><img src="images/icon-angle-right.svg"></span>
+        </div>
+    </section>
+  </div>
+  <div class="bottom-container">
+    <img src="images/image-about-dark.jpg" class="bottom-img">
+    <section class="about">
+      <h3 class="heading">About our furniture</h3>
 
-  Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-  to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-  experience in this industry, we understand what customers want for their home and office.
+      <p class="text">Our multifunctional collection blends design and function to suit your individual taste.
+      Make each room unique, or pick a cohesive theme that best express your interests and what
+      inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+      or anything in between. Product specialists are available to help you create your dream space.</p>
+    </section>
+    <img src="images/image-about-light.jpg" class="bottom-img">
+  </div>
+</main>
 
-  Shop now
-
-  About our furniture
-
-  Our multifunctional collection blends design and function to suit your individual taste.
-  Make each room unique, or pick a cohesive theme that best express your interests and what
-  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
