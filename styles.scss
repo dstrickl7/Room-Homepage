@@ -16,26 +16,37 @@ body{
 
 .text{
 	color: $darkgray;
-}
-
-.big-heading{
-
+	font-size: 12px;
+	line-height: 1.25rem;
 }
 
 .heading{
 	text-transform: uppercase;
 }
 
+.logo{
+	padding-right: 2rem;
+}
+
 .navbar{
+	position: absolute;
 	display: flex;
+	padding: 2.5rem;
 	z-index: 10;
 }
 
 .navlinks{
 	text-transform: lowercase;
 	text-decoration: none;
-	// color: $white;
+	color: $white;
+	padding: 1.5rem;
+	padding-bottom: 0;
+	font-weight: 500;
+	&:hover{
+		border-bottom: solid .25rem;
+	}
 }
+
 .navlist{
 	display: flex;
 	flex-direction: row;
@@ -46,9 +57,14 @@ body{
 .top-container{
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	position: relative;
-	top: 0;
-	left: 0;
+	h1{
+		font-weight: 700;
+		font-size: 2.25rem;
+	}
+	p{
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
 }
 
 .top-left{
@@ -60,8 +76,38 @@ body{
 	height: 100%;
 }
 
+.top-right{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 1.5rem;
+	padding-left: 2.5rem;
+	position: relative;
+}
+
+.arrow-container{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	bottom: 0;
+	left: 0;
+	img{
+		padding: 1rem;
+	}
+}
+
 .arrows{
+	display: flex;
+	justify-content: center;
 	background-color: $black;
+	height: 65px;
+	width: 65px;
+	cursor: pointer;
+	border: none;
+	&:hover{
+		background-color: $verydarkgray
+	}
 }
 
 .shop-btn{
@@ -70,11 +116,26 @@ body{
 	border: none;
 	background-color: $white;
 	color: $verydarkgray;
+	cursor: pointer;
 }
 
 .bottom-container{
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
+}
+
+.about{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2rem;
+	h3{
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: .5rem;
+		padding-bottom: 1rem;
+	}
+	
 }
 
 #top-left-2, #top-left-3, #top-right-2, #top-right-3{
