@@ -24,16 +24,21 @@ body{
 	text-transform: uppercase;
 }
 
-.logo{
-	padding-right: 2rem;
-}
-
-.navbar{
+.nav-container{
 	position: absolute;
 	display: flex;
 	padding: 2.5rem;
 	z-index: 10;
 }
+
+.logo{
+	padding-right: 2rem;
+}
+
+.dropdown{
+	display: none;
+}
+
 
 .navlinks{
 	text-transform: lowercase;
@@ -43,7 +48,7 @@ body{
 	padding-bottom: 0;
 	font-weight: 500;
 	&:hover{
-		border-bottom: solid .25rem;
+		text-decoration: underline;
 	}
 }
 
@@ -68,7 +73,7 @@ body{
 }
 
 .top-left{
-	background: url("images/desktop-image-hero-1.jpg");
+	
 }
 
 .top-left-img, .bottom-img{
@@ -138,10 +143,73 @@ body{
 	
 }
 
-#top-left-2, #top-left-3, #top-right-2, #top-right-3{
+#top-right-2, #top-right-3{
 	display: none;
 }
 
-@media (width: 375px){
+@media (max-width: 750px){
+	.nav-container{
+		width: 100%;
 
+	}
+
+	.logo-container{
+		width: 65%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo{
+		
+
+	}
+
+	.dropdown{
+		display: flex;
+		cursor: pointer;
+	}
+
+	.navbar{
+		display: none;
+	}
+
+	.navbar.active{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.top-container{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.top-left{
+		
+	}
+
+	.arrow-container{
+		top: -50px;
+		
+		
+	}
+
+	.arrows{
+		height: 45px;
+		width: 45px;
+	}
+
+	.bottom-container{
+		display: flex;
+		flex-direction: column;
+	}
+
+	
+}
+
+@media (max-width: 375px){
+	.logo-container{
+		width: 75%;
+		
+	}
 }

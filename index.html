@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   
   <title>Room homepage</title>
@@ -18,23 +18,28 @@
   </style>
 </head>
 <body>
+  
   <header>
-
+    <div class="nav-container">
+    <span class="logo-container">
+      <img src="images/icon-hamburger.svg" alt="menu" class="dropdown">
+      <img src="images/logo.svg" alt="logo" class="logo">
+    </span>
     <nav class="navbar" id="nav-bar">
-      <div class="logo"><img src="images/logo.svg"></div>
       <ul class="navlist" id="nav-list">
         <li><a href="#" class="navlinks">Home</a></li>
         <li><a href="#" class="navlinks">Shop</a></li>
         <li><a href="#" class="navlinks">About</a></li>
         <li><a href="#" class="navlinks">Contact</a></li>
       </ul>
-    </nav> 
+    </nav>
+    </div> 
   </header>
   <main>
     <div class="top-container">
-      <div class="top-left" id="top-left-1"><img src="images/desktop-image-hero-1.jpg" class="top-left-img"></div>
-      <div class="top-left" id="top-left-2"><img src="images/desktop-image-hero-2.jpg" class="top-left-img"></div>
-      <div class="top-left" id="top-left-3"><img src="images/desktop-image-hero-3.jpg" class="top-left-img"></div>
+      <div class="top-left" id="top-left-1">
+        <img class="top-left-img" name="mainImg">
+      </div>
       <section class="top-right" id="top-right-1">
         <h1 class="big-heading">Discover innovative ways to decorate</h1>
 
@@ -45,8 +50,8 @@
         <button class="shop-btn">Shop now <img src="images/icon-arrow.svg"></button>
         
         <div class="arrow-container">
-          <div class="arrows"><img src="images/icon-angle-left.svg"></div>
-          <div class="arrows"><img src="images/icon-angle-right.svg"></div>
+          <div class="arrows" id="left-arrow"><img src="images/icon-angle-left.svg"></div>
+          <div class="arrows" id="right-arrow"><img src="images/icon-angle-right.svg"></div>
         </div>
       </section>
       <section class="top-right" id="top-right-2">
@@ -95,4 +100,5 @@
     Coded by <a href="#">Danielle S.</a>.
   </div>
 </body>
+<script src="scripts.js"></script>
 </html>
