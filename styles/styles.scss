@@ -14,6 +14,7 @@
 body {
   font-family: variables.$spartan;
   background-color: variables.$white;
+  font-size: 12px;
 }
 
 .overlay.active {
@@ -30,6 +31,7 @@ body {
   color: variables.$darkgray;
   font-size: 12px;
   line-height: 1.25rem;
+  font-weight: 500;
 }
 
 .heading {
