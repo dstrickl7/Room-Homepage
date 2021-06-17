@@ -71,3 +71,34 @@
   font-weight: 600;
   color: variables.$black;
 }
+
+@media (min-width: 600px) {
+  .nav-container {
+    width: 60%;
+    padding: 3.5rem;
+  }
+  .navbar {
+    display: inline;
+    width: 60%;
+  }
+
+  .navlist {
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .navlinks {
+    color: variables.$white;
+    &:hover {
+      border-bottom: solid variables.$white;
+    }
+  }
+
+  .logo-container {
+    width: 15%;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

@@ -62,3 +62,27 @@
     padding-left: 1.5rem;
   }
 }
+
+@media (min-width: 600px) {
+  .top-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+
+  .top-left-img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .arrow-container {
+    cursor: pointer;
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: 0;
+  }
+
+  .shop-btn {
+    cursor: pointer;
+  }
+}

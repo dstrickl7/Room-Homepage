@@ -9,7 +9,7 @@ const logo = document.querySelector(".logo").classList;
 const close = document.querySelector(".close");
 const navContainer = document.querySelector(".nav-container").classList;
 const overlay = document.querySelector(".overlay").classList;
-let i = 1;
+let i = 0;
 
 hamburger.addEventListener("click", () => {
   navList.toggle("active");
@@ -49,7 +49,6 @@ if (document.documentElement.clientWidth <= 600) {
 const topRight = ["topRight1", "topRight2", "topRight3"];
 const changeImage = () => {
   document.mainImg.src = images[i].src;
-  topRight.id = topRight[i];
   if (i < images.length - 1) {
     i++;
   } else {
@@ -57,5 +56,6 @@ const changeImage = () => {
   }
 };
 
+changeImage();
 leftArrow.addEventListener("click", changeImage);
 rightArrow.addEventListener("click", changeImage);
