@@ -1,0 +1,73 @@
+@use 'variables';
+@use 'mixins';
+
+.nav-container {
+  position: absolute;
+  display: flex;
+  padding: 2.5rem;
+  z-index: 10;
+  width: 100%;
+}
+
+.nav-container.active {
+  background-color: variables.$white;
+  position: relative;
+}
+
+.logo-container {
+  width: 65%;
+  @include mixins.flex(center, space-between);
+}
+
+.logo {
+  display: inline;
+}
+
+.logo.active {
+  display: none;
+}
+
+.dropdown {
+  cursor: pointer;
+  color: variables.$darkgray;
+  height: 1.5rem;
+}
+
+.close {
+  display: none;
+}
+
+.close.active {
+  display: inline;
+}
+
+.hamburger {
+  display: inline;
+}
+
+.hamburger.active {
+  display: none;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar.active {
+  display: flex;
+  background-color: variables.$white;
+}
+
+.navlist {
+  list-style: none;
+  @include mixins.flex(center, center);
+  text-transform: lowercase;
+}
+
+.navlinks {
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: variables.$black;
+}

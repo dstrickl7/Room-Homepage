@@ -1,0 +1,166 @@
+.nav-container {
+  position: absolute;
+  display: flex;
+  padding: 2.5rem;
+  z-index: 10;
+  width: 100%;
+}
+
+.nav-container.active {
+  background-color: white;
+  position: relative;
+}
+
+.logo-container {
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline;
+}
+
+.logo.active {
+  display: none;
+}
+
+.dropdown {
+  cursor: pointer;
+  color: #a1a1a1;
+  height: 1.5rem;
+}
+
+.close {
+  display: none;
+}
+
+.close.active {
+  display: inline;
+}
+
+.hamburger {
+  display: inline;
+}
+
+.hamburger.active {
+  display: none;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar.active {
+  display: flex;
+  background-color: white;
+}
+
+.navlist {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+}
+
+.navlinks {
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: black;
+}
+
+.top-left {
+  height: 65vh;
+  width: 100%;
+}
+
+.top-left-img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.top-right {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.arrow-container {
+  background-color: black;
+  height: 20%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: -20%;
+  right: 0;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+  border: white;
+}
+
+#topRight2,
+#topRight3 {
+  display: none;
+}
+
+.text {
+  padding: 1rem;
+}
+
+.shop-btn {
+  border: none;
+  letter-spacing: 0.5rem;
+  background-color: white;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.shop-btn img {
+  padding-left: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background-color: white;
+}
+
+.overlay.active {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.text {
+  color: #a1a1a1;
+  font-size: 12px;
+  line-height: 1.25rem;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=styles.css.map */
