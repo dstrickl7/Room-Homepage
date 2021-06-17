@@ -18,10 +18,23 @@
   font-weight: 600;
 }
 
-.top-right {
+.topRight1,
+.topRight2,
+.topRight3 {
+  display: none;
+}
+
+.top-right,
+.topRight1.active,
+.topRight2.active,
+.topRight3.active {
   position: relative;
   width: 100%;
   padding: 1.5rem;
+}
+
+.top-right {
+  padding: 0;
 }
 
 .arrow-container {
@@ -37,11 +50,6 @@
 .arrows {
   @include mixins.flex(center, center);
   border: white;
-}
-
-#topRight2,
-#topRight3 {
-  display: none;
 }
 
 .text {
@@ -76,10 +84,17 @@
     width: 100%;
   }
 
-  .top-right {
+  .top-right,
+  .topRight1.active,
+  .topRight2.active,
+  .topRight3.active {
+    @include mixins.flex(flex-start, center, column);
     padding: 5rem;
     padding-bottom: 6.5rem;
-    @include mixins.flex(flex-start, center, column);
+  }
+
+  .top-right {
+    padding: 0;
   }
 
   .arrow-container {
@@ -102,5 +117,8 @@
 
   .shop-btn {
     cursor: pointer;
+    &:hover {
+      color: variables.$darkgray;
+    }
   }
 }
