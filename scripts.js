@@ -30,7 +30,7 @@ close.addEventListener("click", () => {
 });
 
 images = new Array();
-if (window.clientWidth <= 600 + "px") {
+if (document.documentElement.clientWidth <= 600) {
   images[0] = new Image();
   images[0].src = "images/mobile-image-hero-1.jpg";
   images[1] = new Image();

@@ -1,0 +1,12 @@
+@use 'variables';
+@use 'mixins';
+
+.bottom-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.bottom-img {
+  width: 100%;
+  object-fit: contain;
+}

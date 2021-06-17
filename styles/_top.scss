@@ -8,7 +8,16 @@
 
 .top-left-img {
   height: 100%;
-  object-fit: contain;
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+}
+
+.big-heading {
+  padding: 1rem;
+  padding-top: 3rem;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
 
 .top-right {
@@ -40,14 +49,18 @@
 
 .text {
   padding: 1rem;
+  padding-top: 0.5rem;
+  font-weight: 600;
 }
 
 .shop-btn {
   border: none;
   letter-spacing: 0.5rem;
   background-color: variables.$white;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
+  text-transform: uppercase;
+  padding: 1.5rem 1rem;
   img {
     padding-left: 1.5rem;
   }
