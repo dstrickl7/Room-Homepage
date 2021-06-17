@@ -22,7 +22,7 @@
   letter-spacing: 0.25rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .bottom-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -31,5 +31,11 @@
 
   .bottom-img {
     height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about {
+    @include mixins.flex(flex-start, center, column);
   }
 }
