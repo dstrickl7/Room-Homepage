@@ -14,7 +14,6 @@ const topRight2 = document.querySelector(".topRight2").classList;
 const topRight3 = document.querySelector(".topRight3").classList;
 let i = 0;
 let j = 0;
-let didLoop = false;
 
 hamburger.addEventListener("click", () => {
   navList.toggle("active");
@@ -53,63 +52,60 @@ if (document.documentElement.clientWidth <= 600) {
 
 let topRight = [topRight1, topRight2, topRight3];
 
-const changeContent = () => {
-  // console.log(didLoop);
-  // if (didLoop == true) {
-  //   topRight[j - 1].toggle("active");
-  //   j = 0;
-  //   topRight[j].toggle("active");
-  //   j++;
-  // } else if (j == 0 && didLoop == false) {
-  //   console.log("j1: " + j);
-  //   topRight[j].toggle("active");
-  //   j++;
-  //   console.log("j2: " + j);
-  // } else if (j < topRight.length - 1) {
-  //   console.log("j3: " + j);
-  //   topRight[j - 1].toggle("active");
-  //   j++;
-  //   console.log("j4: " + j);
-  //   topRight[j].toggle("active");
-  // } else {
-  //   console.log("j5: " + j);
-  //   topRight[j].toggle("active");
-  //   topRight[j - 1].toggle("active");
-  //   didLoop = true;
-  //   console.log("jlooped: " + j);
-  // }
-};
-document.mainImg.src = images[0].src;
-const nextImage = () => {
-  document.mainImg.src = images[i].src;
-
-  console.log("i: " + i);
-  if (i < images.length - 1) {
-    i++;
+topRight[j].toggle("active");
+const nextContent = () => {
+  topRight[j].toggle("active");
+  if (j < topRight.length - 1) {
+    j++;
+    topRight[j].toggle("active");
   } else {
-    i = 0;
+    j = 0;
+    topRight[j].toggle("active");
   }
 };
 
-const previousImage = () => {
-  document.mainImg.src = images[i].src;
-  console.log("i: " + i);
+const prevContent = () => {
+  topRight[j].toggle("active");
+  if (j > 0) {
+    j--;
+    topRight[j].toggle("active");
+  } else {
+    j = topRight.length - 1;
+    topRight[j].toggle("active");
+  }
+};
+
+document.mainImg.src = images[i].src;
+
+const nextImage = () => {
+  if (i < images.length - 1) {
+    i++;
+    document.mainImg.src = images[i].src;
+  } else {
+    i = 0;
+    document.mainImg.src = images[i].src;
+  }
+};
+
+const prevImage = () => {
   if (i > 0) {
     i--;
+    document.mainImg.src = images[i].src;
   } else {
     i = images.length - 1;
+    document.mainImg.src = images[i].src;
   }
 };
 
 const nextAll = () => {
   nextImage();
-  changeContent();
+  nextContent();
 };
 
-const previousAll = () => {
-  previousImage();
-  changeContent();
+const prevAll = () => {
+  prevImage();
+  prevContent();
 };
 
-leftArrow.addEventListener("click", previousAll);
+leftArrow.addEventListener("click", prevAll);
 rightArrow.addEventListener("click", nextAll);
