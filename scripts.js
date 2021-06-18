@@ -9,6 +9,7 @@ const overlay = document.querySelector(".overlay").classList;
 const topRight1 = document.querySelector(".topRight1").classList;
 const topRight2 = document.querySelector(".topRight2").classList;
 const topRight3 = document.querySelector(".topRight3").classList;
+const mainImg = document.getElementById("mainImg");
 let i = 0;
 let j = 0;
 
@@ -49,26 +50,26 @@ if (document.documentElement.clientWidth <= 600) {
   images[2].src = "images/desktop-image-hero-3.jpg";
 }
 
-document.mainImg.src = images[i].src;
+mainImg.src = images[i].src;
 
 // rotating through image array to display images
 const nextImage = () => {
   if (i < images.length - 1) {
     i++;
-    document.mainImg.src = images[i].src;
+    mainImg.src = images[i].src;
   } else {
     i = 0;
-    document.mainImg.src = images[i].src;
+    mainImg.src = images[i].src;
   }
 };
 
 const prevImage = () => {
   if (i > 0) {
     i--;
-    document.mainImg.src = images[i].src;
+    mainImg.src = images[i].src;
   } else {
     i = images.length - 1;
-    document.mainImg.src = images[i].src;
+    mainImg.src = images[i].src;
   }
 };
 
