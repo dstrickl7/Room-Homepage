@@ -2,9 +2,6 @@ const navList = document.getElementById("nav-bar").classList;
 const hamburger = document.querySelector(".hamburger");
 const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
-const topLeftImg = document.querySelector(".top-left-img");
-const content = document.querySelectorAll(".top-right");
-const body = document.getElementById("body");
 const logo = document.querySelector(".logo").classList;
 const close = document.querySelector(".close");
 const navContainer = document.querySelector(".nav-container").classList;
@@ -33,6 +30,8 @@ close.addEventListener("click", () => {
   overlay.toggle("active");
 });
 
+// Set up images for main image carousel
+
 images = new Array();
 if (document.documentElement.clientWidth <= 600) {
   images[0] = new Image();
@@ -50,9 +49,34 @@ if (document.documentElement.clientWidth <= 600) {
   images[2].src = "images/desktop-image-hero-3.jpg";
 }
 
+document.mainImg.src = images[i].src;
+
+// rotating through image array to display images
+const nextImage = () => {
+  if (i < images.length - 1) {
+    i++;
+    document.mainImg.src = images[i].src;
+  } else {
+    i = 0;
+    document.mainImg.src = images[i].src;
+  }
+};
+
+const prevImage = () => {
+  if (i > 0) {
+    i--;
+    document.mainImg.src = images[i].src;
+  } else {
+    i = images.length - 1;
+    document.mainImg.src = images[i].src;
+  }
+};
+
+// settig up content array and looping through array to display main content
 let topRight = [topRight1, topRight2, topRight3];
 
 topRight[j].toggle("active");
+
 const nextContent = () => {
   topRight[j].toggle("active");
   if (j < topRight.length - 1) {
@@ -75,28 +99,7 @@ const prevContent = () => {
   }
 };
 
-document.mainImg.src = images[i].src;
-
-const nextImage = () => {
-  if (i < images.length - 1) {
-    i++;
-    document.mainImg.src = images[i].src;
-  } else {
-    i = 0;
-    document.mainImg.src = images[i].src;
-  }
-};
-
-const prevImage = () => {
-  if (i > 0) {
-    i--;
-    document.mainImg.src = images[i].src;
-  } else {
-    i = images.length - 1;
-    document.mainImg.src = images[i].src;
-  }
-};
-
+//Allowing images and content to be changed on button click
 const nextAll = () => {
   nextImage();
   nextContent();
@@ -106,6 +109,16 @@ const prevAll = () => {
   prevImage();
   prevContent();
 };
+
+//Allowing images and content to change with arrow press
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
+    nextAll();
+  } else if (e.key === "ArrowLeft") {
+    prevAll();
+  }
+});
 
 leftArrow.addEventListener("click", prevAll);
 rightArrow.addEventListener("click", nextAll);
